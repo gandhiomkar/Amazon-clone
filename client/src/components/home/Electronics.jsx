@@ -1,7 +1,10 @@
 // Home.js
 import React from "react";
-import ProductCard from "../components/ProductCard";
+import ProductCard from "../ProductCard";
 import "./Home.css";
+import { useState, useEffect } from "react";
+import axios from "axios";
+import Navbar from "../header/Navbar";
 
 function Electronics() {
   //Added Data
@@ -26,12 +29,15 @@ function Electronics() {
   };
 
   return (
-    <div className="home-container">
-      <h2>Featured Products</h2>
-      <div className="product-grid">
-        {products.map((product) => (
-          <ProductCard key={product.item_id} product={product} />
-        ))}
+    <div>
+      <Navbar />
+      <div className="home-container">
+        <h2>Featured Products</h2>
+        <div className="product-grid">
+          {recommendedProducts.map((product) => (
+            <ProductCard key={product.item_id} product={product} />
+          ))}
+        </div>
       </div>
     </div>
   );

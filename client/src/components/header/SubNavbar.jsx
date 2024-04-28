@@ -14,7 +14,9 @@ const SubNavbar = () => {
         <a href="" className="left-item">
           Best Sellers
         </a>
-        <Link to="/cellphones"> Mobile </Link>
+        <a href="">
+          <Link to="/cellphones"> Mobile </Link>
+        </a>
         <a href="" className="left-item">
           Customer Services
         </a>
@@ -22,17 +24,15 @@ const SubNavbar = () => {
           Today's Deals
         </a>
         <a href="" className="left-item">
-          Fashion
+          <Link to="/fashion"> Fashion </Link>
         </a>
         <a href="" className="left-item">
-          Electronics
+          <Link to="/electronics"> Electronics </Link>
         </a>
         <a href="" className="left-item">
-          Home & Kitchen
+          <Link to="/appliances"> Appliances </Link>
         </a>
-        <a href="" className="left-item">
-          New Releases
-        </a>
+        <Link to="/beauty"> Beauty </Link>
       </div>
 
       <div className="right">
